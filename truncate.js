@@ -21,3 +21,38 @@ var wordLimit = 8;
 var shortText = truncateWords(originalText, wordLimit);
 console.log('originalText: ' + originalText);
 console.log('shortText: ' + shortText);
+
+"use strict";
+
+var longText = 'one two three four five';
+var longTextArray = longText.split(' ');
+var newlongText = longTextArray.join(" ");
+var numWords = 3;
+var longTextshort = longTextArray.splice(0,numWords);
+var myfunction = function(truncateWords){
+    console.log(longText[truncateWords]);
+    console.log(longTextArray);
+    console.log(newlongText);
+    console.log(longText);
+    console.log(longTextshort + '...');
+
+};
+
+myfunction();
+// splits the string into individual arrays for counting.
+var CountingWords = longText.split(' ');
+//used to return entire array of words.
+var countedWords = CountingWords.splice(0,5);
+var charfunction = function(truncateChar){
+    var charText = 'hello world';
+	//truncates by characters.
+    alert(charText.substring(3));
+	//outputs the number of splits (number of words)
+	//from CountingWords which displays how 
+	//many words are in the string.
+    console.log(countedWords.length);
+	//prints the original number entered into numWords variable. 
+    console.log(numWords);
+};
+
+charfunction();
