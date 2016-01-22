@@ -16,25 +16,36 @@
 // This portion of the script is meant to call and display the result of your Function.
 // You do not need to change the following lines, but you may change them if you 
 // are experimenting further or pursuing stretch goals.
+
+
 var originalText = "There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.";
-var wordLimit = 8;
+/*var wordLimit = 8;
 var shortText = truncateWords(originalText, wordLimit);
 console.log('originalText: ' + originalText);
-console.log('shortText: ' + shortText);
+console.log('shortText: ' + shortText);*/
 
-"use strict";
+//I commented this stretch goal of "use strict" out because it gives me the red "x" saying the syntax is wrong in codeanywhere.
+//This "use strict" does work in the console though when I run the project. I just don't want it to cause an error and have the project not run.
+//"use strict";
 
-var longText = 'one two three four five';
-var longTextArray = longText.split(' ');
-var newlongText = longTextArray.join(" ");
+//This was my original string I used in my first submition.
+//var longText = 'one two three four five';
+
+//splits the words in the string into an array.
+var OriginalTextArray = OriginalText.split(' ');
+//joins the words in the split without the separation in .split
+var newOriginalText = OriginalTextArray.join(" ");
+// variable to know where to stop the string
 var numWords = 3;
-var longTextshort = longTextArray.splice(0,numWords);
+//stops the string before the 3rd word. 0 being "There" and 2 being "two"
+var OriginalTextshort = OriginalTextArray.splice(0,numWords);
 var myfunction = function(truncateWords){
-    console.log(longText[truncateWords]);
-    console.log(longTextArray);
-    console.log(newlongText);
-    console.log(longText);
-    console.log(longTextshort + '...');
+    console.log(OriginalText[truncateWords]);
+    console.log(OriginalTextArray); //prints the string to an array
+    console.log(newOriginalText); //removes separation in the array to make back into string
+    console.log(OriginalText); //prints origianl string 
+    console.log(OriginalTextshort + '...'); //adds an ellipsis after the truncated string
+	console.log("Number of words in the array: " + OriginalTextArray.length); //counts and prints number of words in the array
 
 };
 
@@ -42,7 +53,7 @@ myfunction();
 // splits the string into individual arrays for counting.
 var CountingWords = longText.split(' ');
 //used to return entire array of words.
-var countedWords = CountingWords.splice(0,5);
+var countedWords = CountingWords.splice(0,15);
 var charfunction = function(truncateChar){
     var charText = 'hello world';
 	//truncates by characters.
