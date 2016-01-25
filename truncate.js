@@ -51,7 +51,7 @@ var myfunction = function(truncateWords){
 
 myfunction();
 // splits the string into individual arrays for counting.
-var CountingWords = longText.split(' ');
+var CountingWords = OriginalText.split(' ');
 //used to return entire array of words.
 var countedWords = CountingWords.splice(0,15);
 var charfunction = function(truncateChar){
